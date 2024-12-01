@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AdventOfCode2024": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\noahj\\source\\repos\\AdventOfCode2024"
+    }
+  }
+}
