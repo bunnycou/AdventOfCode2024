@@ -3,11 +3,16 @@
 Every day will have its own static class and is called in Main in Program.cs
 
 Every day will have Primary and Secondary functions for the part 1 and part 2 of each day.
+
+## Utility Functions
+- Day1.MergeSort
+- Day2.MergeSortReverse
+
 ## Checklist
 - [x] Day 1
 	- [x] Part 2
-- [ ] Day 2
-	- [ ] Part 2
+- [x] Day 2
+	- [x] Part 2
 - [ ] Day 3
 	- [ ] Part 2
 - [ ] Day 4
