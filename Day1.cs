@@ -12,7 +12,7 @@ namespace AdventOfCode2024
 
         public static string Answer()
         {
-            return $"Day 1: {Primary()} AND {Sub()}";
+            return $"Day 1: {Primary()} AND {Secondary()}";
         }
 
         private static int Primary()
@@ -22,7 +22,7 @@ namespace AdventOfCode2024
 
             foreach (string line in input)
             {
-                var nums = line.Split("   ");
+                string[] nums = line.Split("   ");
                 left.Add(Int32.Parse(nums[0]));
                 right.Add(Int32.Parse(nums[1]));
             }
@@ -39,14 +39,14 @@ namespace AdventOfCode2024
 
             return ret;
         }
-        private static int Sub()
+        private static int Secondary()
         {
             List<int> left = new();
             List<int> right = new();
 
             foreach (string line in input)
             {
-                var nums = line.Split("   ");
+                string[] nums = line.Split("   ");
                 left.Add(Int32.Parse(nums[0]));
                 right.Add(Int32.Parse(nums[1]));
             }
@@ -60,13 +60,13 @@ namespace AdventOfCode2024
             }
             return ret;
         }
-        private static List<int> MergeSort(List<int> list)
+        public static List<int> MergeSort(List<int> list)
         {
             // return if single element
             if (list.Count == 1) { return list; }
 
             // split list in two
-            var mid = list.Count / 2; // is floor
+            int mid = list.Count / 2; // is floor
             List<int> left = new();
             List<int> right = new();
             for (int i = 0; i < list.Count; i++)
