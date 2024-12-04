@@ -6,6 +6,7 @@
         {
             Console.WriteLine(Day1.Answer());
             Console.WriteLine(Day2.Answer());
+            Console.WriteLine(Day3.Answer());
         }
 
         public static void ConsoleWriteList(List<int> list)
