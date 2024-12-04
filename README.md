@@ -10,6 +10,7 @@ I try to avoid C# specific shortcut functions and things like Order in order to 
 - Day1.MergeSort(List\<int> list)
 - Day2.MergeSortReverse(List\<int> list)
 - Day3.Substring(string Original, int start, int length)
+- Day4 potential crossword substring functions, doubt they will be reused, staying private functions for now
 
 ## Checklist
 - [x] Day 1
@@ -18,8 +19,8 @@ I try to avoid C# specific shortcut functions and things like Order in order to 
 	- [x] Part 2
 - [x] Day 3
 	- [x] Part 2
-- [ ] Day 4
-	- [ ] Part 2
+- [x] Day 4
+	- [x] Part 2
 - [ ] Day 5
 	- [ ] Part 2
 - [ ] Day 6
