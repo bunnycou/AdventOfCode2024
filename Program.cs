@@ -8,6 +8,7 @@
             Console.WriteLine(Day2.Answer());
             Console.WriteLine(Day3.Answer());
             Console.WriteLine(Day4.Answer());
+            Console.WriteLine(Day5.Answer());
         }
 
         public static void ConsoleWriteList(List<int> list)
