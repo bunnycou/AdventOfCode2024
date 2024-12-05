@@ -13,7 +13,7 @@ namespace AdventOfCode2024
 
         public static string Answer()
         {
-            return $"Day3: {Primary()} AND {Secondary()}";
+            return $"Day 3: {Primary()} AND {Secondary()}";
         }
 
         private static int Primary() // regex practice

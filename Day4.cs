@@ -12,7 +12,7 @@ namespace AdventOfCode2024
 
         public static string Answer()
         {
-            return $"Day 1: {Primary()} AND {Secondary()}";
+            return $"Day 4: {Primary()} AND {Secondary()}";
         }
 
         // horiz right

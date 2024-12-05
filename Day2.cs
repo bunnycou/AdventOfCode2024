@@ -6,7 +6,7 @@ namespace AdventOfCode2024
 
         public static string Answer()
         {
-            return $"Day2: {Primary()} AND {Secondary()}";
+            return $"Day 2: {Primary()} AND {Secondary()}";
         }
 
         public static int Primary() // number of safe reports
