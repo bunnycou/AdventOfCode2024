@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventOfCode2024
+namespace AdventOfCode2024.week1
 {
     internal class Day4
     {
@@ -55,7 +55,7 @@ namespace AdventOfCode2024
 
             for (int row = 0; row < input.Count; row++)
             {
-                for (int col = 0;  col < input[row].Length; col++)
+                for (int col = 0; col < input[row].Length; col++)
                 {
                     if (input[row][col] == 'X')
                     {
@@ -133,21 +133,21 @@ namespace AdventOfCode2024
         {
             int total = 0;
 
-            for (int row = 1; row < input.Count-1; row++)
+            for (int row = 1; row < input.Count - 1; row++)
             {
-                for (int col = 1; col < input[row].Length-1; col++)
+                for (int col = 1; col < input[row].Length - 1; col++)
                 {
                     if (input[row][col] == 'A')
                     {
-                        if ((DownRight(input, row-1, col-1, "MAS".Length) == "MAS" || UpLeft(input, row+1, col+1, "MAS".Length) == "MAS") && 
-                            (DownLeft(input, row-1, col+1, "MAS".Length) == "MAS" || UpRight(input, row+1, col-1, "MAS".Length) == "MAS")) 
+                        if ((DownRight(input, row - 1, col - 1, "MAS".Length) == "MAS" || UpLeft(input, row + 1, col + 1, "MAS".Length) == "MAS") &&
+                            (DownLeft(input, row - 1, col + 1, "MAS".Length) == "MAS" || UpRight(input, row + 1, col - 1, "MAS".Length) == "MAS"))
                         {
                             total++;
                         }
                     }
                 }
             }
-            
+
             return total;
         }
 

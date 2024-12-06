@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace AdventOfCode2024
+namespace AdventOfCode2024.week1
 {
     internal static class Day3 // what the hell...
     {
@@ -28,10 +28,10 @@ namespace AdventOfCode2024
 
                 foreach (Match match in matches)
                 {
-                    int num1 = Int32.Parse(match.Groups[1].Value);
-                    int num2 = Int32.Parse(match.Groups[2].Value);
+                    int num1 = int.Parse(match.Groups[1].Value);
+                    int num2 = int.Parse(match.Groups[2].Value);
 
-                    total += (num1 * num2);
+                    total += num1 * num2;
                 }
             }
 
@@ -46,18 +46,18 @@ namespace AdventOfCode2024
 
             bool mulEnable = true;
 
-            foreach(string s in input)
+            foreach (string s in input)
             {
                 for (int c = 0; c < s.Length; c++)
                 {
                     if (SubstringExists(s, c, "do()"))
                     {
                         mulEnable = true;
-                    } 
+                    }
                     else if (SubstringExists(s, c, "don't()"))
                     {
                         mulEnable = false;
-                    } 
+                    }
                     else if (mulEnable)
                     {
                         if (SubstringExists(s, c, "mul("))
@@ -79,16 +79,16 @@ namespace AdventOfCode2024
                                     numbers[num].Add(current); c++;
                                 }
                                 else if (current == ',') // if we have comma seperator
-                                { 
-                                    num++; c++; 
+                                {
+                                    num++; c++;
                                     if (num > 1) // if this was an extra comma seperator
-                                    { isValid = false; } 
-                                } 
-                                else if (current == ')') // if we have parentheses terminator
-                                { 
-                                    finished = true; isValid = false; 
+                                    { isValid = false; }
                                 }
-                                else { isValid = false;} // not number or part of mul(x,y) statement
+                                else if (current == ')') // if we have parentheses terminator
+                                {
+                                    finished = true; isValid = false;
+                                }
+                                else { isValid = false; } // not number or part of mul(x,y) statement
                             }
                             if (finished) // found two numbers and complete mul statement
                             {
@@ -107,13 +107,13 @@ namespace AdventOfCode2024
 
         public static string Substring(string s, int start, int length)
         {
-            if (start+length > s.Length)
+            if (start + length > s.Length)
             {
                 length = s.Length - start;
             }
 
             string ret = "";
-            for (int i = start; i < start+length; i++)
+            for (int i = start; i < start + length; i++)
             {
                 ret += s[i];
             }
@@ -130,13 +130,13 @@ namespace AdventOfCode2024
             List<int> ints = new();
             foreach (char c in chars)
             {
-                ints.Add(Int32.Parse(c.ToString()));
+                ints.Add(int.Parse(c.ToString()));
             }
 
             int ret = 0;
 
             int j = 0;
-            for (int i = ints.Count-1; i >= 0; i--)
+            for (int i = ints.Count - 1; i >= 0; i--)
             {
                 ret += ints[i] * (int)Math.Pow(10, j++);
             }

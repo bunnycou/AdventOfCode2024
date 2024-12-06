@@ -1,4 +1,4 @@
-namespace AdventOfCode2024
+namespace AdventOfCode2024.week1
 {
     internal static class Day2
     {
@@ -35,13 +35,14 @@ namespace AdventOfCode2024
                 if (ReportIsSafe(reportRaw))
                 {
                     total++;
-                } else
+                }
+                else
                 {
                     bool safe = false;
                     List<int> report = new();
                     foreach (string item in reportRaw.Split(" "))
                     {
-                        report.Add(Int32.Parse(item));
+                        report.Add(int.Parse(item));
                     }
 
                     for (int i = 0; i < report.Count; i++) // skip i element
@@ -73,7 +74,7 @@ namespace AdventOfCode2024
             List<int> report = new();
             foreach (string item in reportRaw.Split(" "))
             {
-                report.Add(Int32.Parse(item));
+                report.Add(int.Parse(item));
             }
 
             return ReportIsSafe(report);
@@ -102,11 +103,13 @@ namespace AdventOfCode2024
             {
                 List<int> reportSort = Day1.MergeSort(report); // reuse sorting from Day1
                 return report.SequenceEqual(reportSort); // if original report is the same as new sort then it is consistent increasing
-            } else if (report[0] > report[1]) // decreasing
+            }
+            else if (report[0] > report[1]) // decreasing
             {
                 List<int> reportSort = MergeSortReverse(report); // reuse sorting from Day1
                 return report.SequenceEqual(reportSort); // if original report is the same as new sort then it is consistent decreasing
-            } else // there are matching nums which indicates unsafe report
+            }
+            else // there are matching nums which indicates unsafe report
             {
                 return false;
             }

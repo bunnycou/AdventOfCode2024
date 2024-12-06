@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventOfCode2024
+namespace AdventOfCode2024.week1
 {
     internal static class Day1
     {
@@ -23,8 +23,8 @@ namespace AdventOfCode2024
             foreach (string line in input)
             {
                 string[] nums = line.Split("   ");
-                left.Add(Int32.Parse(nums[0]));
-                right.Add(Int32.Parse(nums[1]));
+                left.Add(int.Parse(nums[0]));
+                right.Add(int.Parse(nums[1]));
             }
 
             left = MergeSort(left);
@@ -47,8 +47,8 @@ namespace AdventOfCode2024
             foreach (string line in input)
             {
                 string[] nums = line.Split("   ");
-                left.Add(Int32.Parse(nums[0]));
-                right.Add(Int32.Parse(nums[1]));
+                left.Add(int.Parse(nums[0]));
+                right.Add(int.Parse(nums[1]));
             }
 
             Dictionary<int, int> rightDict = BucketSortish(right);
@@ -85,7 +85,8 @@ namespace AdventOfCode2024
                 if (j >= left.Count)
                 {
                     ret.Add(right[k++]);
-                } else if (k >= right.Count)
+                }
+                else if (k >= right.Count)
                 {
                     ret.Add(left[j++]);
                 }

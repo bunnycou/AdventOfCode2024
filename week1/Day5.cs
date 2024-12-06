@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Sources;
 
-namespace AdventOfCode2024
+namespace AdventOfCode2024.week1
 {
     internal class Day5
     {
@@ -46,7 +46,8 @@ namespace AdventOfCode2024
                             pages.Add(pageNum, new List<int>() { pageAfter });
                         }
                     }
-                } else
+                }
+                else
                 {
                     updates.Add(line);
                 }
@@ -62,7 +63,7 @@ namespace AdventOfCode2024
                 // parse input and make sure that no after page shows up before page in list
                 string[] pageraw = line.Split(",");
                 List<int> pageList = new();
-                foreach (string p in pageraw) { pageList.Add(Int32.Parse(p)); }
+                foreach (string p in pageraw) { pageList.Add(int.Parse(p)); }
 
                 bool valid = true;
                 for (int i = 1; i < pageList.Count; i++)
@@ -91,7 +92,7 @@ namespace AdventOfCode2024
             {
                 string[] pageraw = line.Split(",");
                 List<int> pageList = new();
-                foreach (string p in pageraw) { pageList.Add(Int32.Parse(p)); }
+                foreach (string p in pageraw) { pageList.Add(int.Parse(p)); }
 
                 bool valid = true;
 
@@ -126,7 +127,7 @@ namespace AdventOfCode2024
                     if (pages[original[i]].Contains(original[j])) // page needs to come later
                     {
                         original.Insert(j, original[i]);
-                        original.RemoveAt(i+1);
+                        original.RemoveAt(i + 1);
                         i = 1; j = -1; // restart check
                     }
                 }
