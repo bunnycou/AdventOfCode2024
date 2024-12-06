@@ -1,4 +1,6 @@
-﻿namespace AdventOfCode2024
+﻿using AdventOfCode2024.week1;
+
+namespace AdventOfCode2024
 {
     internal class Program
     {
@@ -9,6 +11,7 @@
             Console.WriteLine(Day3.Answer());
             Console.WriteLine(Day4.Answer());
             Console.WriteLine(Day5.Answer());
+            Console.WriteLine(Day6.Answer());
         }
 
         public static void ConsoleWriteList(List<int> list)
