@@ -12,6 +12,7 @@ I try to avoid C# specific shortcut functions and things like Order in order to 
 - Day3.Substring(string Original, int start, int length): string
 - Day4 potential crossword substring functions, doubt they will be reused, staying private functions for now
 - Day6.InBounds(int[row, col] pos, int rowMax, int colMax): bool
+- Day7.BinaryUp(ref list\<int> list): void
 
 ## Checklist
 - [x] Day 1
@@ -26,8 +27,8 @@ I try to avoid C# specific shortcut functions and things like Order in order to 
 	- [x] Part 2
 - [x] Day 6
 	- [x] Part 2
-- [ ] Day 7
-	- [ ] Part 2
+- [x] Day 7
+	- [x] Part 2
 - [ ] Day 8
 	- [ ] Part 2
 - [ ] Day 9

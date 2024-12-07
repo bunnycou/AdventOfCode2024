@@ -11,7 +11,8 @@ namespace AdventOfCode2024
             Console.WriteLine(Day3.Answer());
             Console.WriteLine(Day4.Answer());
             Console.WriteLine(Day5.Answer());
-            Console.WriteLine(Day6.Answer());
+            // Console.WriteLine(Day6.Answer()); // takes ~5-10 seconds
+            Console.WriteLine(Day7.Answer());
         }
 
         public static void ConsoleWriteList(List<int> list)
