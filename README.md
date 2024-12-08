@@ -29,8 +29,8 @@ I try to avoid C# specific shortcut functions and things like Order in order to 
 	- [x] Part 2
 - [x] Day 7
 	- [x] Part 2
-- [ ] Day 8
-	- [ ] Part 2
+- [x] Day 8
+	- [x] Part 2
 - [ ] Day 9
 	- [ ] Part 2
 - [ ] Day 10
