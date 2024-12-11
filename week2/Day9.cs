@@ -23,7 +23,7 @@ namespace AdventOfCode2024.week2
 
             for (int i = 0; i < input.Length; i++) // create filesystem with free blocks
             {
-                int blockSize = Int32.Parse(input[i].ToString());
+                int blockSize = int.Parse(input[i].ToString());
                 if (i % 2 == 0) // even is blocks, odd is free space
                 {
                     for (int j = 0; j < blockSize; j++)
@@ -63,7 +63,7 @@ namespace AdventOfCode2024.week2
             for (int i = 0; i < filesys.Count; i++)
             {
                 if (filesys[i] == ".") { break; }
-                total += i * Int32.Parse(filesys[i]);
+                total += i * int.Parse(filesys[i]);
             }
 
             return total;
@@ -81,7 +81,7 @@ namespace AdventOfCode2024.week2
             for (int i = 0; i < input.Length; i++) // create filesystem with free blocks
             {
                 offset.Add(0);
-                int blockSize = Int32.Parse(input[i].ToString());
+                int blockSize = int.Parse(input[i].ToString());
                 if (i % 2 == 0) // even is blocks, odd is free space
                 {
                     usedBlocks.Add(blockSize);
@@ -124,7 +124,7 @@ namespace AdventOfCode2024.week2
             {
                 if (filesys[i] != ".")
                 {
-                    total += i * Int32.Parse(filesys[i]);
+                    total += i * int.Parse(filesys[i]);
                 }
             }
 

@@ -22,12 +22,12 @@ namespace AdventOfCode2024.week1
             foreach (string s in input)
             {
                 string[] strings = s.Split(": ");
-                long target = Int64.Parse(strings[0]);
+                long target = long.Parse(strings[0]);
                 List<int> nums = new();
                 List<int> ops = new();
                 foreach (string s2 in strings[1].Split(' '))
                 {
-                    nums.Add(Int32.Parse(s2));
+                    nums.Add(int.Parse(s2));
                 }
                 for (int i = 0; i < nums.Count-1; i++)
                 {
@@ -68,12 +68,12 @@ namespace AdventOfCode2024.week1
             foreach (string s in input)
             {
                 string[] strings = s.Split(": ");
-                long target = Int64.Parse(strings[0]);
+                long target = long.Parse(strings[0]);
                 List<int> nums = new();
                 List<int> ops = new();
                 foreach (string s2 in strings[1].Split(' '))
                 {
-                    nums.Add(Int32.Parse(s2));
+                    nums.Add(int.Parse(s2));
                 }
                 for (int i = 0; i < nums.Count - 1; i++)
                 {
@@ -128,7 +128,7 @@ namespace AdventOfCode2024.week1
                     total *= num;
                 } else if (oper == "||")
                 {
-                    total = Int64.Parse($"{total}{num}");
+                    total = long.Parse($"{total}{num}");
                 }
             }
 

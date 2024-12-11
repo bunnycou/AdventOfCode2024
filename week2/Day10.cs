@@ -24,7 +24,7 @@ namespace AdventOfCode2024.week2
             {
                 for (int col = 0; col < input[row].Length; col++)
                 {
-                    int index = Int32.Parse(input[row][col].ToString());
+                    int index = int.Parse(input[row][col].ToString());
                     if (index == current)
                     {
                         if (current == 0)
@@ -53,7 +53,7 @@ namespace AdventOfCode2024.week2
             {
                 for (int col = 0; col < input[row].Length; col++)
                 {
-                    int index = Int32.Parse(input[row][col].ToString());
+                    int index = int.Parse(input[row][col].ToString());
                     if (index == current)
                     {
                         if (current == 0)
@@ -75,10 +75,10 @@ namespace AdventOfCode2024.week2
         private static Dictionary<string, bool> ValidDirections(int row, int col) // returns dictionary saying if UP DOWN LEFT RIGHT are valid paths
         {
             Dictionary<string, bool> ret = new();
-            int current = Int32.Parse(input[row][col].ToString());
+            int current = int.Parse(input[row][col].ToString());
             if (row > 0)
             {
-                int up = Int32.Parse(input[row - 1][col].ToString());
+                int up = int.Parse(input[row - 1][col].ToString());
                 if (up == current+1)
                 {
                     ret.Add("UP", true);
@@ -91,7 +91,7 @@ namespace AdventOfCode2024.week2
 
             if (row < input.Count-1)
             {
-                int down = Int32.Parse(input[row + 1][col].ToString());
+                int down = int.Parse(input[row + 1][col].ToString());
                 if (down == current + 1)
                 {
                     ret.Add("DOWN", true);
@@ -104,7 +104,7 @@ namespace AdventOfCode2024.week2
 
             if (col > 0)
             {
-                int left = Int32.Parse(input[row][col - 1].ToString());
+                int left = int.Parse(input[row][col - 1].ToString());
                 if (left == current + 1)
                 {
                     ret.Add("LEFT", true);
@@ -117,7 +117,7 @@ namespace AdventOfCode2024.week2
 
             if (col < input[0].Length-1)
             {
-                int right = Int32.Parse(input[row][col + 1].ToString());
+                int right = int.Parse(input[row][col + 1].ToString());
                 if (right == current + 1)
                 {
                     ret.Add("RIGHT", true);
@@ -135,7 +135,7 @@ namespace AdventOfCode2024.week2
         {
             List<int[]> locNine = new();
 
-            int current = Int32.Parse(input[start[0]][start[1]].ToString());
+            int current = int.Parse(input[start[0]][start[1]].ToString());
 
             if (current == 9)
             {
@@ -195,7 +195,7 @@ namespace AdventOfCode2024.week2
         {
             int totalPaths = 0;
 
-            int current = Int32.Parse(input[start[0]][start[1]].ToString());
+            int current = int.Parse(input[start[0]][start[1]].ToString());
 
             if (current == 9)
             {
