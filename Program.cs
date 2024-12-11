@@ -19,6 +19,7 @@ namespace AdventOfCode2024
             Console.WriteLine(Day8.Answer());
             //Console.WriteLine(Day9.Answer()); // takes ~3-5 seconds
             Console.WriteLine(Day10.Answer());
+            Console.WriteLine(Day11.Answer());
             // week 3 //
             // week 4 //
         }
